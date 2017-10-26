@@ -22,5 +22,8 @@ RUN export DEBIAN_FRONTEND=noninteractive ;\
     apt-get clean ;\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ;\
     pip install --upgrade pip ;\
-    pip install --no-cache-dir numpy==1.13.3 pandas==0.20.3
-
+    pip install --no-cache-dir numpy==1.13.3 pandas==0.20.3 ;\
+    mkdir /tmp/phantomjs ;\
+    curl -L https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 | tar -xj --strip-components=1 -C /tmp/phantomjs ;\
+    cd /tmp/phantomjs ;\
+    mv bin/phantomjs /usr/bin
