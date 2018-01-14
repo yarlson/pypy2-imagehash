@@ -1,4 +1,4 @@
-FROM pypy:2-5.9.0
+FROM pypy:2-5.10.0
 
 MAINTAINER Yar Kravtsov <yarlson@gmail.com>
 
